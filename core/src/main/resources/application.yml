@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: jdbc:h2:mem:db
+    driver-class-name: org.h2.Driver
+    generate-unique-name: true
+  liquibase:
+    change-log: classpath:db/liquibase-changelog.xml
+    database-change-log-table: location-change-log-table
+    database-change-log-lock-table: location-change-log-lock-table
+
+swagger:
+  enabled: true
+
